@@ -60,6 +60,6 @@ if ingredients_list: ##if statement for when fruits are chosen
         st.success('Your Smoothie is ordered, '+name_on_order+'!', icon="✅")
 ## New section to display smooothiefroot info
 import requests  
-smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
 st.text(smoothiefroot_response.json)
     
