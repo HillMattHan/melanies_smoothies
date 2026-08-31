@@ -42,7 +42,7 @@ if ingredients_list: ##if statement for when fruits are chosen
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + ' ' ##space between fruits chosen + ' '
         st.subheader(fruit_chosen + ' Nutriton Information')
-        smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+        smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + fruit_chosen)
         ##Json into dataframe
         sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
     ##output the string
